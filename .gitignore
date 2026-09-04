@@ -1,0 +1,18 @@
+# Large datasets
+M1_agentic_facilityops_ai/data/raw/
+M1_agentic_facilityops_ai/data/processed/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables / secrets
+.env
+
+# VS Code
+.vscode/
