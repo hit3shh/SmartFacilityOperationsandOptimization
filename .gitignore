@@ -2,6 +2,10 @@
 M1_agentic_facilityops_ai/data/raw/
 M1_agentic_facilityops_ai/data/processed/
 
+# Predictive Maintenance datasets
+M2_Predictive_Maintenance/data/raw/
+M2_Predictive_Maintenance/data/processed/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -16,3 +20,21 @@ env/
 
 # VS Code
 .vscode/
+
+# Trained ML models
+*.pkl
+*.joblib
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
