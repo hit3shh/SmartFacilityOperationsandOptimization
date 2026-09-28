@@ -22,6 +22,53 @@ st.set_page_config(
 )
 
 
+st.markdown(
+    """
+    <style>
+    .block-container {
+        padding-top: 1.2rem;
+        padding-bottom: 2rem;
+    }
+    [data-testid="stSidebar"] {
+        border-right: 1px solid rgba(128,128,128,0.20);
+    }
+    .hero {
+        padding: 1.4rem 1.6rem;
+        border-radius: 18px;
+        background: linear-gradient(135deg, rgba(30,136,229,.14), rgba(0,188,212,.10));
+        border: 1px solid rgba(30,136,229,.18);
+        margin-bottom: 1rem;
+    }
+    .hero h1 { margin: 0 0 .25rem 0; font-size: 2.2rem; }
+    .hero p { margin: 0; opacity: .78; font-size: 1rem; }
+    .section-card {
+        padding: 1rem 1.1rem;
+        border-radius: 15px;
+        border: 1px solid rgba(128,128,128,.18);
+        background: rgba(128,128,128,.035);
+        margin-bottom: .8rem;
+    }
+    .insight-card {
+        padding: .9rem 1rem;
+        border-radius: 13px;
+        border-left: 4px solid #1e88e5;
+        background: rgba(30,136,229,.07);
+        margin: .45rem 0;
+    }
+    .recommendation-card {
+        padding: 1rem;
+        border-radius: 14px;
+        border: 1px solid rgba(0,188,212,.25);
+        background: rgba(0,188,212,.07);
+        margin: .5rem 0;
+    }
+    .small-muted { opacity: .68; font-size: .82rem; }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # ==================================================
 # PROJECT PATHS
 # ==================================================
@@ -53,6 +100,11 @@ OCCUPANCY_PROJECT_PATH = (
 SECURITY_PROJECT_PATH = (
     M3_PROJECT_PATH
     / "security_system"
+)
+
+M4_PROJECT_PATH = (
+    SPRINGBOARD_DIR
+    / "M4_Cost_Optimization"
 )
 
 
@@ -251,6 +303,25 @@ def load_security_data():
     return df
 
 
+@st.cache_data
+def load_cost_data():
+
+    data_path = (
+        M4_PROJECT_PATH
+        / "data"
+        / "operational_costs.csv"
+    )
+
+    if not data_path.exists():
+        raise FileNotFoundError(
+            f"Cost dataset not found:\n{data_path}"
+        )
+
+    df = pd.read_csv(data_path)
+    df["date"] = pd.to_datetime(df["date"])
+    return df
+
+
 # ==================================================
 # SMART FACILITY AGENT
 # ==================================================
@@ -359,14 +430,15 @@ st.sidebar.caption(
 
 
 page = st.sidebar.radio(
-    "Navigate to Agent",
+    "Navigate to Module",
     [
-        "🏠 Overview",
+        "🏠 Executive Overview",
         "⚡ Energy Agent",
         "🔧 Maintenance Agent",
         "🏢 Occupancy Agent",
         "🔐 Security Agent",
-        "🤖 Combined Facility Agent"
+        "💰 Cost Optimization",
+        "🤖 Facility Intelligence"
     ]
 )
 
@@ -403,173 +475,115 @@ st.sidebar.caption(
 
 
 # ==================================================
-# OVERVIEW
+# EXECUTIVE OVERVIEW
 # ==================================================
 
-if page == "🏠 Overview":
-
-    st.title(
-        "🏢 Smart Facility System"
-    )
-
-    st.caption(
-        "Unified Agentic AI platform for intelligent "
-        "facility operations and optimization"
-    )
-
-
-    st.success(
-        "Four specialized AI agents are integrated into the Smart Facility platform."
-    )
-
-
-    # ------------------------------------------------
-    # AGENT STATUS
-    # ------------------------------------------------
-
-    st.header(
-        "🤖 Agent Network"
-    )
-
-
-    col1, col2 = st.columns(2)
-
-
-    with col1:
-
-        show_agent_status(
-            "⚡ Energy Agent",
-            "Energy monitoring, analytics, anomaly detection "
-            "and operational recommendations."
-        )
-
-        show_agent_status(
-            "🏢 Occupancy Agent",
-            "Occupancy analytics and next-step occupancy forecasting."
-        )
-
-
-    with col2:
-
-        show_agent_status(
-            "🔧 Maintenance Agent",
-            "Equipment health scoring, failure prediction "
-            "and maintenance recommendations."
-        )
-
-        show_agent_status(
-            "🔐 Security Agent",
-            "Access monitoring, behavioral anomaly detection "
-            "and security alerts."
-        )
-
-
-    # ------------------------------------------------
-    # SYSTEM ARCHITECTURE
-    # ------------------------------------------------
-
-    st.divider()
-
-    st.header(
-        "🧠 Agentic Architecture"
-    )
-
+if page == "🏠 Executive Overview":
 
     st.markdown(
         """
-        ### Facility Data
-        ↓
+        <div class="hero">
+            <h1>🏢 Smart Facility Operations Center</h1>
+            <p>Unified Agentic AI platform for intelligent facility operations,
+            optimization and executive decision support.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-        ### Specialized AI Agents
+    st.success(
+        "M1–M4 integrated: Energy • Maintenance • Occupancy • Security • Cost Optimization"
+    )
 
-        **⚡ Energy**  
-        Energy consumption and anomalies
+    st.subheader("🧭 Facility Command Center")
 
-        **🔧 Maintenance**  
-        Equipment health and failure prediction
+    c1, c2, c3, c4, c5 = st.columns(5)
 
-        **🏢 Occupancy**  
-        Room occupancy and forecasting
+    cards = [
+        ("⚡", "Energy", "M1", "Monitoring + anomalies"),
+        ("🔧", "Maintenance", "M2", "Failure prediction"),
+        ("🏢", "Occupancy", "M3", "Usage + forecasting"),
+        ("🔐", "Security", "M3", "Anomaly detection"),
+        ("💰", "Cost", "M4", "Budget + savings"),
+    ]
 
-        **🔐 Security**  
-        Access behavior and anomaly detection
-
-        ↓
-
-        ### 🤖 Smart Facility Agent
-
-        ↓
-
-        ### Facility-Level Insights
-        """)
-
-
-    # ------------------------------------------------
-    # DATA SOURCES
-    # ------------------------------------------------
+    for col, (icon, name, milestone, desc) in zip(
+        [c1, c2, c3, c4, c5], cards
+    ):
+        with col:
+            st.markdown(
+                f"""
+                <div class="section-card">
+                    <div style="font-size:1.35rem">{icon}</div>
+                    <b>{name}</b>
+                    <div class="small-muted">{milestone} · {desc}</div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
     st.divider()
+    st.subheader("💰 M4 Cost Snapshot")
 
-    st.header(
-        "📊 Connected Data Sources"
+    try:
+        overview_agent = get_smart_facility_agent()
+        cost = overview_agent.run_cost_analysis()
+
+        k1, k2, k3, k4 = st.columns(4)
+        k1.metric("Operational Cost", f"₹{cost['total_operational_cost']:,.0f}")
+        k2.metric("Budget", f"₹{cost['total_budget']:,.0f}")
+        k3.metric("Budget Variance", f"₹{cost['budget_variance']:,.0f}")
+        k4.metric("Potential Savings", f"₹{cost['potential_savings']:,.0f}")
+
+        if cost["budget_status"] == "Over Budget":
+            st.warning(
+                f"⚠️ Current budget position: ₹{abs(cost['budget_variance']):,.0f} "
+                f"above allocation. Estimated savings opportunity: "
+                f"₹{cost['potential_savings']:,.0f}."
+            )
+        else:
+            st.success("✅ Operational expenditure is within the allocated budget.")
+
+    except Exception:
+        st.info("M4 cost snapshot is unavailable until the cost dataset is configured.")
+
+    st.divider()
+    st.subheader("🧠 How the Agentic System Works")
+
+    st.markdown(
+        """
+        <div class="section-card">
+        <b>Facility Data</b> → Energy, equipment, occupancy, access and cost data
+        <br><br>↓<br><br>
+        <b>Specialized AI Agents</b> → Domain-specific analysis
+        <br><br>↓<br><br>
+        <b>Smart Facility Agent</b> → Cross-agent orchestration
+        <br><br>↓<br><br>
+        <b>Facility Intelligence</b> → Priorities, savings opportunities and actions
+        </div>
+        """,
+        unsafe_allow_html=True
     )
-
-
-    col1, col2, col3, col4 = st.columns(4)
-
-
-    with col1:
-
-        st.metric(
-            "Energy",
-            "M1"
-        )
-
-        st.caption(
-            "ASHRAE building energy data"
-        )
-
-
-    with col2:
-
-        st.metric(
-            "Maintenance",
-            "M2"
-        )
-
-        st.caption(
-            "AI4I 2020 equipment data"
-        )
-
-
-    with col3:
-
-        st.metric(
-            "Occupancy",
-            "M3"
-        )
-
-        st.caption(
-            "UCI Room Occupancy data"
-        )
-
-
-    with col4:
-
-        st.metric(
-            "Security",
-            "M3"
-        )
-
-        st.caption(
-            "BPHAC access-control logs"
-        )
-
 
     st.info(
-        "Datasets are loaded only when their corresponding "
-        "agent page or analysis is opened."
+        "💡 Each agent remains modular, while the orchestration layer combines "
+        "their outputs for facility-level decision support."
     )
+
+    st.subheader("📊 Connected Data Sources")
+
+    d1, d2, d3, d4, d5 = st.columns(5)
+    d1.metric("Energy", "M1")
+    d1.caption("ASHRAE building energy")
+    d2.metric("Maintenance", "M2")
+    d2.caption("AI4I equipment data")
+    d3.metric("Occupancy", "M3")
+    d3.caption("Room occupancy data")
+    d4.metric("Security", "M3")
+    d4.caption("Access-control logs")
+    d5.metric("Cost", "M4")
+    d5.caption("Operational cost data")
+
 
 
 # ==================================================
@@ -1788,6 +1802,491 @@ elif page == "🔐 Security Agent":
 
 
 # ==================================================
+# COST OPTIMIZATION AGENT - M4
+# ==================================================
+
+elif page == "💰 Cost Optimization":
+
+    st.markdown(
+        """
+        <div class="hero">
+            <h1>💰 Cost Optimization Center</h1>
+            <p>Operational expenditure, budget compliance,
+            savings opportunities and explainable ROI.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    try:
+        cost_df = load_cost_data()
+        agent = get_smart_facility_agent()
+
+        with st.spinner("Cost Optimization Agent analyzing expenditure..."):
+            cost_results = agent.run_cost_analysis()
+
+        st.subheader("📌 Executive Cost Indicators")
+
+        k1, k2, k3, k4 = st.columns(4)
+        k1.metric("Operational Cost", f"₹{cost_results['total_operational_cost']:,.0f}")
+        k2.metric("Allocated Budget", f"₹{cost_results['total_budget']:,.0f}")
+        k3.metric("Variance", f"₹{cost_results['budget_variance']:,.0f}")
+        k4.metric("Potential Savings", f"₹{cost_results['potential_savings']:,.0f}")
+
+        if cost_results["budget_status"] == "Over Budget":
+            st.error(
+                f"🔴 OVER BUDGET — ₹{abs(cost_results['budget_variance']):,.0f} above allocation."
+            )
+        else:
+            st.success(f"🟢 Budget status: {cost_results['budget_status']}")
+
+        st.divider()
+        st.subheader("📈 Monthly Cost vs Budget")
+
+        cost_cols = [
+            "energy_cost", "maintenance_cost", "water_cost",
+            "vendor_cost", "labor_cost", "other_cost"
+        ]
+
+        monthly = cost_df.copy()
+        monthly["total_cost"] = monthly[cost_cols].sum(axis=1)
+
+        st.line_chart(
+            monthly[["date", "total_cost", "budget"]].set_index("date"),
+            height=330
+        )
+
+        st.caption(
+            "When total cost stays above the budget line, expenditure is "
+            "higher than planned for that period."
+        )
+
+        left, right = st.columns([1.2, 1])
+
+        with left:
+            st.subheader("💸 Cost Breakdown")
+            breakdown = cost_results["cost_breakdown"]
+
+            breakdown_df = pd.DataFrame(
+                {
+                    "Category": [
+                        k.replace("_cost", "").replace("_", " ").title()
+                        for k in breakdown
+                    ],
+                    "Cost": list(breakdown.values())
+                }
+            ).set_index("Category")
+
+            st.bar_chart(breakdown_df, height=350)
+
+        with right:
+            st.subheader("🔎 Cost Drivers")
+            total = cost_results["total_operational_cost"]
+
+            for category, value in breakdown.items():
+                share = safe_percentage(value, total)
+                st.markdown(
+                    f"""
+                    <div class="section-card">
+                        <b>{category.replace('_cost','').replace('_',' ').title()}</b>
+                        <br>₹{value:,.0f} · {share:.1f}% of total cost
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+
+        st.divider()
+        st.subheader("💡 Identified Savings Opportunities")
+
+        for i, opportunity in enumerate(
+            cost_results["savings_opportunities"], 1
+        ):
+            with st.container(border=True):
+                a, b, c = st.columns([1.1, 1, 2.2])
+
+                with a:
+                    st.markdown(f"### {i}. {opportunity['area']}")
+                    st.caption(
+                        f"Current cost: ₹{opportunity['current_cost']:,.0f}"
+                    )
+
+                with b:
+                    st.metric(
+                        "Potential Saving",
+                        f"₹{opportunity['estimated_savings']:,.0f}"
+                    )
+
+                with c:
+                    st.markdown("**Recommended action**")
+                    st.write(opportunity["action"])
+
+        st.divider()
+        st.subheader("📈 Optimization ROI")
+
+        roi = cost_results["roi"]
+        r1, r2, r3 = st.columns(3)
+
+        r1.metric("Estimated Savings", f"₹{roi['estimated_annual_savings']:,.0f}")
+        r2.metric(
+            "Estimated Implementation Cost",
+            f"₹{roi['estimated_implementation_cost']:,.0f}"
+        )
+        r3.metric("Estimated ROI", f"{roi['estimated_roi_percent']:.0f}%")
+
+        st.caption(
+            "ROI is an estimate based on the project's optimization assumptions; "
+            "it is not a measured financial return."
+        )
+
+        st.subheader("🤖 Explainable AI Recommendations")
+
+        for rec in cost_results["recommendations"]:
+            st.markdown(
+                f"""
+                <div class="recommendation-card">
+                    🧠 {rec}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+        with st.expander("📖 How the Cost Optimization Agent works"):
+            st.markdown(
+                """
+                **1. Analyze** — aggregate operational expenditure.
+
+                **2. Compare** — compare actual cost against budget.
+
+                **3. Identify** — find high-impact optimization areas.
+
+                **4. Estimate** — calculate potential savings.
+
+                **5. Evaluate** — estimate ROI from optimization initiatives.
+
+                **6. Recommend** — convert the analysis into facility-manager actions.
+                """
+            )
+
+        with st.expander("📄 View operational cost data"):
+            st.dataframe(
+                cost_df,
+                use_container_width=True,
+                hide_index=True
+            )
+
+    except Exception as exc:
+        st.error(f"Cost Optimization Agent error: {exc}")
+
+
+# ==================================================
+# FACILITY INTELLIGENCE - M4 EXECUTIVE DASHBOARD
+# ==================================================
+
+elif page == "🤖 Facility Intelligence":
+
+    st.markdown(
+        """
+        <div class="hero">
+            <h1>🤖 Facility Intelligence Dashboard</h1>
+            <p>Cross-agent orchestration for executive-level facility decisions.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.info(
+        "This is the M4 decision-support layer: specialized agents are "
+        "coordinated into one facility-level view."
+    )
+
+    maintenance_df = load_maintenance_data()
+    occupancy_df = load_occupancy_data()
+    security_df = load_security_data()
+
+    product_ids = maintenance_df["Product ID"].astype(str).unique()
+
+    selected_product_id = st.selectbox(
+        "⚙️ Select machine",
+        product_ids
+    )
+
+    selected_machine = maintenance_df[
+        maintenance_df["Product ID"].astype(str) == selected_product_id
+    ].iloc[0]
+
+    anomalous_events = (
+        security_df[
+            security_df["is_anomaly"] == 1
+        ]
+        .sort_values("timestamp", ascending=False)
+    )
+
+    selected_security_event = None
+
+    if not anomalous_events.empty:
+
+        event_ids = anomalous_events["log_id"].astype(str).tolist()
+
+        selected_security_log = st.selectbox(
+            "🔐 Select security event",
+            event_ids
+        )
+
+        selected_security_event = anomalous_events[
+            anomalous_events["log_id"].astype(str) == selected_security_log
+        ].iloc[0].to_dict()
+
+        if pd.notna(selected_security_event.get("timestamp")):
+            selected_security_event["timestamp"] = str(
+                selected_security_event["timestamp"]
+            )
+
+    st.divider()
+
+    run = st.button(
+        "🚀 Run Complete Facility Intelligence",
+        use_container_width=True,
+        type="primary"
+    )
+
+    if run:
+
+        with st.spinner(
+            "Coordinating Energy, Maintenance, Occupancy, Security and Cost agents..."
+        ):
+
+            agent = get_smart_facility_agent()
+
+            energy_results = agent.run_energy_analysis(
+                load_energy_full()
+            )
+
+            maintenance_result = agent.analyze_machine(
+                selected_machine
+            )
+
+            occupancy_results = agent.run_occupancy_analysis(
+                occupancy_df
+            )
+
+            security_result = None
+
+            if selected_security_event:
+                security_result = agent.analyze_security_event(
+                    selected_security_event
+                )
+
+            cost_results = agent.run_cost_analysis()
+
+            facility_insight = agent.generate_facility_insight(
+                energy_results,
+                maintenance_result,
+                cost_results
+            )
+
+            st.session_state["facility_results"] = {
+                "energy": energy_results,
+                "maintenance": maintenance_result,
+                "occupancy": occupancy_results,
+                "security": security_result,
+                "cost": cost_results,
+                "insight": facility_insight
+            }
+
+    results = st.session_state.get("facility_results")
+
+    if results:
+
+        energy_results = results["energy"]
+        maintenance_result = results["maintenance"]
+        occupancy_results = results["occupancy"]
+        security_result = results["security"]
+        cost_results = results["cost"]
+        facility_insight = results["insight"]
+
+        st.subheader("🎯 Facility Decision Summary")
+
+        p1, p2, p3, p4, p5 = st.columns(5)
+
+        p1.metric(
+            "Priority",
+            facility_insight["facility_priority"]
+        )
+        p2.metric(
+            "Energy Anomalies",
+            f"{energy_results['anomaly_count']:,}"
+        )
+        p3.metric(
+            "Machine Risk",
+            maintenance_result["risk_level"]
+        )
+        p4.metric(
+            "Potential Savings",
+            f"₹{cost_results['potential_savings']:,.0f}"
+        )
+        p5.metric(
+            "Budget",
+            cost_results["budget_status"]
+        )
+
+        st.divider()
+        st.subheader("🧠 Cross-Agent Intelligence")
+
+        for insight in facility_insight["insights"]:
+            st.markdown(
+                f"""
+                <div class="insight-card">
+                    {insight}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+        st.subheader("🎯 Recommended Facility Action")
+
+        st.markdown(
+            f"""
+            <div class="recommendation-card">
+                <b>Priority: {facility_insight['facility_priority']}</b>
+                <br><br>
+                {facility_insight['combined_recommendation']}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        st.divider()
+        st.subheader("📊 Agent Scorecards")
+
+        a1, a2 = st.columns(2)
+
+        with a1:
+            with st.container(border=True):
+                st.markdown("### ⚡ Energy")
+                summary = energy_results["summary"]
+                st.metric("Total Energy", f"{summary['total_energy']:,.2f}")
+                st.metric("Peak Energy", f"{summary['peak_energy']:,.2f}")
+                st.caption(
+                    f"{energy_results['anomaly_count']:,} anomalies detected"
+                )
+
+        with a2:
+            with st.container(border=True):
+                st.markdown("### 🔧 Maintenance")
+                st.metric(
+                    "Machine",
+                    maintenance_result["product_id"]
+                )
+                st.metric(
+                    "Health Score",
+                    f"{maintenance_result['health_score']}/100"
+                )
+                st.caption(
+                    f"Risk: {maintenance_result['risk_level']}"
+                )
+
+        a3, a4 = st.columns(2)
+
+        with a3:
+            with st.container(border=True):
+                st.markdown("### 🏢 Occupancy")
+                st.metric(
+                    "Current",
+                    occupancy_results["current_occupancy"]
+                )
+                st.metric(
+                    "Maximum",
+                    occupancy_results["maximum_occupancy"]
+                )
+                st.caption(
+                    f"Predicted next: "
+                    f"{occupancy_results['forecast']['predicted_next_occupancy']}"
+                )
+
+        with a4:
+            with st.container(border=True):
+                st.markdown("### 🔐 Security")
+
+                if security_result:
+                    status = (
+                        "ANOMALY"
+                        if security_result["is_anomaly"]
+                        else "NORMAL"
+                    )
+
+                    st.metric("Assessment", status)
+                    st.metric(
+                        "Severity",
+                        security_result["severity"]
+                    )
+                else:
+                    st.info("No security event selected.")
+
+        st.divider()
+        st.subheader("💰 Financial Intelligence")
+
+        f1, f2, f3 = st.columns(3)
+
+        f1.metric(
+            "Operational Cost",
+            f"₹{cost_results['total_operational_cost']:,.0f}"
+        )
+        f2.metric(
+            "Budget Variance",
+            f"₹{cost_results['budget_variance']:,.0f}"
+        )
+        f3.metric(
+            "Potential Savings",
+            f"₹{cost_results['potential_savings']:,.0f}"
+        )
+
+        st.caption(
+            "Potential savings are estimated optimization opportunities, "
+            "not guaranteed financial outcomes."
+        )
+
+        st.subheader("🛠️ Action Plan")
+
+        for i, recommendation in enumerate(
+            cost_results["recommendations"], 1
+        ):
+            st.markdown(
+                f"""
+                <div class="recommendation-card">
+                    <b>Action {i}</b><br>
+                    {recommendation}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+        with st.expander("🔬 Explain the facility intelligence logic"):
+            st.markdown(
+                """
+                **Energy Agent** → consumption, peaks and anomalies
+
+                **Maintenance Agent** → equipment health and failure risk
+
+                **Occupancy Agent** → current utilization and forecast
+
+                **Security Agent** → access anomalies and severity
+
+                **Cost Optimization Agent** → expenditure, budget, savings and ROI
+
+                **Smart Facility Agent** → coordinates these outputs and
+                produces facility priority and recommendations.
+                """
+            )
+
+    else:
+        st.info(
+            "👆 Select the analysis inputs and click "
+            "**Run Complete Facility Intelligence** to generate the executive view."
+        )
+
+
+
+# ==================================================
 # COMBINED FACILITY AGENT
 # ==================================================
 
@@ -2004,7 +2503,8 @@ elif page == "🤖 Combined Facility Agent":
             facility_insight = (
                 agent.generate_facility_insight(
                     energy_results,
-                    maintenance_result
+                    maintenance_result,
+                    agent.run_cost_analysis()
                 )
             )
 

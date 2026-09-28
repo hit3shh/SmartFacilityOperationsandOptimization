@@ -52,6 +52,17 @@ SECURITY_SRC_PATH = os.path.join(
     "src"
 )
 
+# M4 COST OPTIMIZATION
+COST_PROJECT_PATH = os.path.join(
+    SPRINGBOARD_DIR,
+    "M4_Cost_Optimization"
+)
+
+COST_SRC_PATH = os.path.join(
+    COST_PROJECT_PATH,
+    "src"
+)
+
 
 # ==================================================
 # IMPORT HELPER
@@ -178,6 +189,30 @@ def get_security_agent_class():
 
 
 # ==================================================
+# IMPORT COST OPTIMIZATION AGENT
+# ==================================================
+
+def get_cost_optimization_agent_class():
+
+    if COST_SRC_PATH in sys.path:
+
+        sys.path.remove(
+            COST_SRC_PATH
+        )
+
+    sys.path.insert(
+        0,
+        COST_SRC_PATH
+    )
+
+    module = importlib.import_module(
+        "cost_optimization_agent"
+    )
+
+    return module.CostOptimizationAgent
+
+
+# ==================================================
 # SMART FACILITY AGENT
 # ==================================================
 
@@ -188,7 +223,10 @@ class SmartFacilityAgent:
         maintenance_model_path
     ):
 
+        # ------------------------------------------
         # Import agent classes
+        # ------------------------------------------
+
         EnergyAgent = (
             get_energy_agent_class()
         )
@@ -205,8 +243,14 @@ class SmartFacilityAgent:
             get_security_agent_class()
         )
 
+        CostOptimizationAgent = (
+            get_cost_optimization_agent_class()
+        )
 
+        # ------------------------------------------
         # Initialize agents
+        # ------------------------------------------
+
         self.energy_agent = (
             EnergyAgent()
         )
@@ -225,10 +269,14 @@ class SmartFacilityAgent:
             SecurityAgent()
         )
 
+        self.cost_optimization_agent = (
+            CostOptimizationAgent()
+        )
 
-    # ==============================================
+
+    # ==================================================
     # ENERGY ANALYSIS
-    # ==============================================
+    # ==================================================
 
     def run_energy_analysis(
         self,
@@ -242,9 +290,9 @@ class SmartFacilityAgent:
         )
 
 
-    # ==============================================
+    # ==================================================
     # MAINTENANCE ANALYSIS
-    # ==============================================
+    # ==================================================
 
     def analyze_machine(
         self,
@@ -272,9 +320,9 @@ class SmartFacilityAgent:
         )
 
 
-    # ==============================================
+    # ==================================================
     # OCCUPANCY ANALYSIS
-    # ==============================================
+    # ==================================================
 
     def run_occupancy_analysis(
         self,
@@ -282,16 +330,15 @@ class SmartFacilityAgent:
     ):
 
         return (
-            self.occupancy_agent
-            .analyze(
+            self.occupancy_agent.analyze(
                 occupancy_df
             )
         )
 
 
-    # ==============================================
+    # ==================================================
     # SECURITY ANALYSIS
-    # ==============================================
+    # ==================================================
 
     def analyze_security_event(
         self,
@@ -326,15 +373,32 @@ class SmartFacilityAgent:
         )
 
 
-    # ==============================================
+    # ==================================================
+    # COST OPTIMIZATION ANALYSIS - M4
+    # ==================================================
+
+    def run_cost_analysis(self):
+
+        return (
+            self.cost_optimization_agent
+            .run_analysis()
+        )
+
+
+    # ==================================================
     # COMBINED FACILITY INSIGHT
-    # ==============================================
+    # ==================================================
 
     def generate_facility_insight(
         self,
         energy_results,
-        maintenance_result
+        maintenance_result,
+        cost_results=None
     ):
+
+        # ------------------------------------------
+        # Energy information
+        # ------------------------------------------
 
         energy_summary = (
             energy_results["summary"]
@@ -348,14 +412,20 @@ class SmartFacilityAgent:
             energy_results["peak_usage"]
         )
 
+        # ------------------------------------------
+        # Maintenance information
+        # ------------------------------------------
+
         maintenance_risk = (
             maintenance_result["risk_level"]
         )
 
         insights = []
 
-
+        # ------------------------------------------
         # Energy insight
+        # ------------------------------------------
+
         insights.append(
             (
                 "Energy system analysis completed. "
@@ -364,8 +434,10 @@ class SmartFacilityAgent:
             )
         )
 
+        # ------------------------------------------
+        # Peak energy insight
+        # ------------------------------------------
 
-        # Peak usage insight
         insights.append(
             (
                 "Peak energy usage occurs around "
@@ -373,8 +445,10 @@ class SmartFacilityAgent:
             )
         )
 
+        # ------------------------------------------
+        # Energy anomaly insight
+        # ------------------------------------------
 
-        # Anomaly insight
         if anomaly_count > 0:
 
             insights.append(
@@ -384,18 +458,83 @@ class SmartFacilityAgent:
                 )
             )
 
-
+        # ------------------------------------------
         # Maintenance insight
+        # ------------------------------------------
+
         insights.append(
             (
-                f"Machine {maintenance_result['product_id']} "
+                f"Machine "
+                f"{maintenance_result['product_id']} "
                 f"has a {maintenance_risk} maintenance "
                 "risk level."
             )
         )
 
+        # ------------------------------------------
+        # COST INSIGHTS - M4
+        # ------------------------------------------
 
-        # Combined priority
+        if cost_results is not None:
+
+            total_cost = (
+                cost_results[
+                    "total_operational_cost"
+                ]
+            )
+
+            total_budget = (
+                cost_results[
+                    "total_budget"
+                ]
+            )
+
+            budget_variance = (
+                cost_results[
+                    "budget_variance"
+                ]
+            )
+
+            budget_status = (
+                cost_results[
+                    "budget_status"
+                ]
+            )
+
+            potential_savings = (
+                cost_results[
+                    "potential_savings"
+                ]
+            )
+
+            insights.append(
+                (
+                    f"Total operational cost is "
+                    f"{total_cost:,.2f} against a "
+                    f"budget of {total_budget:,.2f}."
+                )
+            )
+
+            insights.append(
+                (
+                    f"Budget status: {budget_status}. "
+                    f"Budget variance: "
+                    f"{budget_variance:,.2f}."
+                )
+            )
+
+            insights.append(
+                (
+                    f"Potential cost savings of "
+                    f"{potential_savings:,.2f} "
+                    "were identified."
+                )
+            )
+
+        # ------------------------------------------
+        # FACILITY PRIORITY
+        # ------------------------------------------
+
         if maintenance_risk in [
             "Critical",
             "High"
@@ -404,9 +543,25 @@ class SmartFacilityAgent:
             priority = "High"
 
             combined_recommendation = (
-                "Prioritize maintenance inspection for "
-                "the high-risk machine while continuing "
-                "to monitor facility energy consumption."
+                "Prioritize maintenance inspection "
+                "for the high-risk machine while "
+                "continuing to monitor energy "
+                "consumption and operational costs."
+            )
+
+        elif (
+            cost_results is not None
+            and cost_results["budget_status"]
+            == "Over Budget"
+        ):
+
+            priority = "High"
+
+            combined_recommendation = (
+                "Operational costs are above the "
+                "allocated budget. Prioritize "
+                "energy optimization, predictive "
+                "maintenance and vendor cost control."
             )
 
         elif anomaly_count > 100:
@@ -415,8 +570,8 @@ class SmartFacilityAgent:
 
             combined_recommendation = (
                 "Prioritize investigation of unusual "
-                "energy consumption patterns and continue "
-                "monitoring equipment health."
+                "energy consumption patterns while "
+                "continuing equipment and cost monitoring."
             )
 
         else:
@@ -425,25 +580,30 @@ class SmartFacilityAgent:
 
             combined_recommendation = (
                 "Facility conditions appear stable. "
-                "Continue regular energy and equipment "
-                "monitoring."
+                "Continue regular energy, equipment "
+                "and cost monitoring."
             )
 
+        # ------------------------------------------
+        # RETURN FACILITY INSIGHT
+        # ------------------------------------------
 
         return {
 
-            "facility_priority": priority,
+            "facility_priority":
+                priority,
 
-            "insights": insights,
+            "insights":
+                insights,
 
             "combined_recommendation":
                 combined_recommendation
         }
 
 
-    # ==============================================
+    # ==================================================
     # COMPLETE FACILITY ANALYSIS
-    # ==============================================
+    # ==================================================
 
     def run_complete_analysis(
         self,
@@ -451,30 +611,49 @@ class SmartFacilityAgent:
         machine_data
     ):
 
-        # Run Energy Agent
+        # ------------------------------------------
+        # Energy Agent
+        # ------------------------------------------
+
         energy_results = (
             self.run_energy_analysis(
                 energy_df
             )
         )
 
+        # ------------------------------------------
+        # Maintenance Agent
+        # ------------------------------------------
 
-        # Run Maintenance Agent
         maintenance_result = (
             self.analyze_machine(
                 machine_data
             )
         )
 
+        # ------------------------------------------
+        # Cost Optimization Agent - M4
+        # ------------------------------------------
 
-        # Generate combined insight
+        cost_results = (
+            self.run_cost_analysis()
+        )
+
+        # ------------------------------------------
+        # Facility Intelligence
+        # ------------------------------------------
+
         facility_insight = (
             self.generate_facility_insight(
                 energy_results,
-                maintenance_result
+                maintenance_result,
+                cost_results
             )
         )
 
+        # ------------------------------------------
+        # Return complete results
+        # ------------------------------------------
 
         return {
 
@@ -484,7 +663,9 @@ class SmartFacilityAgent:
             "maintenance_result":
                 maintenance_result,
 
+            "cost_results":
+                cost_results,
+
             "facility_insight":
                 facility_insight
         }
-    
