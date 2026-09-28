@@ -1,0 +1,3041 @@
+[
+  {
+    "entity_id": "robot_assembly_01",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "typical_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0731
+  },
+  {
+    "entity_id": "robot_assembly_02",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "typical_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0527
+  },
+  {
+    "entity_id": "robot_assembly_03",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "typical_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.1006
+  },
+  {
+    "entity_id": "robot_assembly_04",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "typical_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0548
+  },
+  {
+    "entity_id": "robot_assembly_05",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "typical_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0872
+  },
+  {
+    "entity_id": "robot_assembly_06",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "typical_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0917
+  },
+  {
+    "entity_id": "robot_assembly_07",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "typical_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.068
+  },
+  {
+    "entity_id": "robot_assembly_08",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "typical_resources": [
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0754
+  },
+  {
+    "entity_id": "robot_assembly_09",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2"
+    ],
+    "typical_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0892
+  },
+  {
+    "entity_id": "robot_assembly_10",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2"
+    ],
+    "typical_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0784
+  },
+  {
+    "entity_id": "robot_assembly_11",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2"
+    ],
+    "typical_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0658
+  },
+  {
+    "entity_id": "robot_assembly_12",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2"
+    ],
+    "typical_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0793
+  },
+  {
+    "entity_id": "robot_assembly_13",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2"
+    ],
+    "typical_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0802
+  },
+  {
+    "entity_id": "robot_assembly_14",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2"
+    ],
+    "typical_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0904
+  },
+  {
+    "entity_id": "robot_assembly_15",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2"
+    ],
+    "typical_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0803
+  },
+  {
+    "entity_id": "robot_assembly_16",
+    "entity_type": "robot",
+    "subtype": "assembly_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "tool_gripper_a1",
+      "tool_gripper_a2"
+    ],
+    "typical_resources": [
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "read_sensor",
+      "execute_actuator",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 47.265625,
+        "loc": 11.25,
+        "scale": 0.2909090909090909
+      },
+      "mean_seconds": 25.0,
+      "std_seconds": 2.0,
+      "source": "literature_typical"
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.0569
+  },
+  {
+    "entity_id": "robot_camera_01",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_a1",
+      "agv_dock_assembly_a",
+      "database_footage",
+      "camera_mount_b1",
+      "camera_mount_b2",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_a1",
+      "agv_dock_assembly_a",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0261
+  },
+  {
+    "entity_id": "robot_camera_02",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_a2",
+      "agv_dock_assembly_a",
+      "database_footage",
+      "camera_mount_b1",
+      "camera_mount_b2",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_a2",
+      "agv_dock_assembly_a",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.024
+  },
+  {
+    "entity_id": "robot_camera_03",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_b1",
+      "agv_dock_assembly_b",
+      "database_footage",
+      "camera_mount_a1",
+      "camera_mount_a2",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_b1",
+      "agv_dock_assembly_b",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0365
+  },
+  {
+    "entity_id": "robot_camera_04",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_b2",
+      "agv_dock_assembly_b",
+      "database_footage",
+      "camera_mount_a1",
+      "camera_mount_a2",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_b2",
+      "agv_dock_assembly_b",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0378
+  },
+  {
+    "entity_id": "robot_camera_05",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_inspection_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_ia1",
+      "agv_dock_inspection_a",
+      "database_footage",
+      "camera_mount_ib1",
+      "camera_mount_ib2",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_ia1",
+      "agv_dock_inspection_a",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0286
+  },
+  {
+    "entity_id": "robot_camera_06",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_inspection_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_ia2",
+      "agv_dock_inspection_a",
+      "database_footage",
+      "camera_mount_ib1",
+      "camera_mount_ib2",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_ia2",
+      "agv_dock_inspection_a",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0354
+  },
+  {
+    "entity_id": "robot_camera_07",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_inspection_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_ib1",
+      "agv_dock_inspection_b",
+      "database_footage",
+      "camera_mount_ia1",
+      "camera_mount_ia2",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_ib1",
+      "agv_dock_inspection_b",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0335
+  },
+  {
+    "entity_id": "robot_camera_08",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_inspection_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_ib2",
+      "agv_dock_inspection_b",
+      "database_footage",
+      "camera_mount_ia1",
+      "camera_mount_ia2",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_ib2",
+      "agv_dock_inspection_b",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0269
+  },
+  {
+    "entity_id": "robot_camera_09",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_warehouse",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_w1",
+      "agv_dock_warehouse",
+      "database_footage",
+      "camera_mount_s1",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_w1",
+      "agv_dock_warehouse",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0378
+  },
+  {
+    "entity_id": "robot_camera_10",
+    "entity_type": "robot",
+    "subtype": "camera_robot",
+    "home_zone": "zone_shipping",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "camera_mount_s1",
+      "agv_dock_shipping",
+      "database_footage",
+      "camera_mount_w1",
+      "database_alerts"
+    ],
+    "typical_resources": [
+      "camera_mount_s1",
+      "agv_dock_shipping",
+      "database_footage"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "capture_image",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 36.0,
+        "loc": 4.0,
+        "scale": 0.16666666666666666
+      },
+      "mean_seconds": 10.0,
+      "std_seconds": 1.0,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0323
+  },
+  {
+    "entity_id": "robot_inspection_01",
+    "entity_type": "robot",
+    "subtype": "inspection_robot",
+    "home_zone": "zone_inspection_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "agv_dock_inspection_a",
+      "database_quality_control",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1"
+    ],
+    "typical_resources": [
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "agv_dock_inspection_a",
+      "database_quality_control"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 25.0,
+        "loc": 8.0,
+        "scale": 0.48
+      },
+      "mean_seconds": 20.0,
+      "std_seconds": 2.4,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0567
+  },
+  {
+    "entity_id": "robot_inspection_02",
+    "entity_type": "robot",
+    "subtype": "inspection_robot",
+    "home_zone": "zone_inspection_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "agv_dock_inspection_a",
+      "database_quality_control",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1"
+    ],
+    "typical_resources": [
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "agv_dock_inspection_a",
+      "database_quality_control"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 25.0,
+        "loc": 8.0,
+        "scale": 0.48
+      },
+      "mean_seconds": 20.0,
+      "std_seconds": 2.4,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0461
+  },
+  {
+    "entity_id": "robot_inspection_03",
+    "entity_type": "robot",
+    "subtype": "inspection_robot",
+    "home_zone": "zone_inspection_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "agv_dock_inspection_b",
+      "database_quality_control",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1"
+    ],
+    "typical_resources": [
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "agv_dock_inspection_b",
+      "database_quality_control"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 25.0,
+        "loc": 8.0,
+        "scale": 0.48
+      },
+      "mean_seconds": 20.0,
+      "std_seconds": 2.4,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0473
+  },
+  {
+    "entity_id": "robot_inspection_04",
+    "entity_type": "robot",
+    "subtype": "inspection_robot",
+    "home_zone": "zone_inspection_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "agv_dock_inspection_b",
+      "database_quality_control",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1"
+    ],
+    "typical_resources": [
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "agv_dock_inspection_b",
+      "database_quality_control"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 25.0,
+        "loc": 8.0,
+        "scale": 0.48
+      },
+      "mean_seconds": 20.0,
+      "std_seconds": 2.4,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.057
+  },
+  {
+    "entity_id": "robot_inspection_05",
+    "entity_type": "robot",
+    "subtype": "inspection_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "agv_dock_assembly_a",
+      "database_quality_control",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1"
+    ],
+    "typical_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "agv_dock_assembly_a",
+      "database_quality_control"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 25.0,
+        "loc": 8.0,
+        "scale": 0.48
+      },
+      "mean_seconds": 20.0,
+      "std_seconds": 2.4,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0597
+  },
+  {
+    "entity_id": "robot_inspection_06",
+    "entity_type": "robot",
+    "subtype": "inspection_robot",
+    "home_zone": "zone_assembly_a",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "agv_dock_assembly_a",
+      "database_quality_control",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1"
+    ],
+    "typical_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "agv_dock_assembly_a",
+      "database_quality_control"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 25.0,
+        "loc": 8.0,
+        "scale": 0.48
+      },
+      "mean_seconds": 20.0,
+      "std_seconds": 2.4,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0624
+  },
+  {
+    "entity_id": "robot_inspection_07",
+    "entity_type": "robot",
+    "subtype": "inspection_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "agv_dock_assembly_b",
+      "database_quality_control",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1"
+    ],
+    "typical_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "agv_dock_assembly_b",
+      "database_quality_control"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 25.0,
+        "loc": 8.0,
+        "scale": 0.48
+      },
+      "mean_seconds": 20.0,
+      "std_seconds": 2.4,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0636
+  },
+  {
+    "entity_id": "robot_inspection_08",
+    "entity_type": "robot",
+    "subtype": "inspection_robot",
+    "home_zone": "zone_assembly_b",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "agv_dock_assembly_b",
+      "database_quality_control",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1"
+    ],
+    "typical_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "agv_dock_assembly_b",
+      "database_quality_control"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log",
+      "move"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 25.0,
+        "loc": 8.0,
+        "scale": 0.48
+      },
+      "mean_seconds": 20.0,
+      "std_seconds": 2.4,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0491
+  },
+  {
+    "entity_id": "robot_transport_01",
+    "entity_type": "robot",
+    "subtype": "transport_robot",
+    "home_zone": "zone_warehouse",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_assembly_a",
+      "database_inventory",
+      "tool_pallet_lift_01",
+      "camera_mount_w1",
+      "agv_dock_assembly_b",
+      "agv_dock_inspection_a",
+      "agv_dock_inspection_b",
+      "agv_dock_shipping",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_assembly_a",
+      "database_inventory"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 6.250000000000002,
+        "loc": 21.7635,
+        "scale": 2.8490399999999996
+      },
+      "mean_seconds": 39.57000000000001,
+      "std_seconds": 7.1226,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.1321
+  },
+  {
+    "entity_id": "robot_transport_02",
+    "entity_type": "robot",
+    "subtype": "transport_robot",
+    "home_zone": "zone_warehouse",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_assembly_b",
+      "database_inventory",
+      "tool_pallet_lift_01",
+      "camera_mount_w1",
+      "agv_dock_assembly_a",
+      "agv_dock_inspection_a",
+      "agv_dock_inspection_b",
+      "agv_dock_shipping",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_assembly_b",
+      "database_inventory"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 6.250000000000002,
+        "loc": 21.7635,
+        "scale": 2.8490399999999996
+      },
+      "mean_seconds": 39.57000000000001,
+      "std_seconds": 7.1226,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.0926
+  },
+  {
+    "entity_id": "robot_transport_03",
+    "entity_type": "robot",
+    "subtype": "transport_robot",
+    "home_zone": "zone_warehouse",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_inspection_a",
+      "database_inventory",
+      "tool_pallet_lift_01",
+      "camera_mount_w1",
+      "agv_dock_assembly_a",
+      "agv_dock_assembly_b",
+      "agv_dock_inspection_b",
+      "agv_dock_shipping",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_inspection_a",
+      "database_inventory"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 6.250000000000002,
+        "loc": 21.7635,
+        "scale": 2.8490399999999996
+      },
+      "mean_seconds": 39.57000000000001,
+      "std_seconds": 7.1226,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.1035
+  },
+  {
+    "entity_id": "robot_transport_04",
+    "entity_type": "robot",
+    "subtype": "transport_robot",
+    "home_zone": "zone_warehouse",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_inspection_b",
+      "database_inventory",
+      "tool_pallet_lift_01",
+      "camera_mount_w1",
+      "agv_dock_assembly_a",
+      "agv_dock_assembly_b",
+      "agv_dock_inspection_a",
+      "agv_dock_shipping",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_inspection_b",
+      "database_inventory"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 6.250000000000002,
+        "loc": 21.7635,
+        "scale": 2.8490399999999996
+      },
+      "mean_seconds": 39.57000000000001,
+      "std_seconds": 7.1226,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.1379
+  },
+  {
+    "entity_id": "robot_transport_05",
+    "entity_type": "robot",
+    "subtype": "transport_robot",
+    "home_zone": "zone_warehouse",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_shipping",
+      "database_inventory",
+      "tool_pallet_lift_01",
+      "camera_mount_w1",
+      "agv_dock_assembly_a",
+      "agv_dock_assembly_b",
+      "agv_dock_inspection_a",
+      "agv_dock_inspection_b",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_shipping",
+      "database_inventory"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 6.250000000000002,
+        "loc": 21.7635,
+        "scale": 2.8490399999999996
+      },
+      "mean_seconds": 39.57000000000001,
+      "std_seconds": 7.1226,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.1369
+  },
+  {
+    "entity_id": "robot_transport_06",
+    "entity_type": "robot",
+    "subtype": "transport_robot",
+    "home_zone": "zone_warehouse",
+    "shift": "production_hours",
+    "authorized_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_shipping",
+      "database_inventory",
+      "tool_pallet_lift_01",
+      "camera_mount_w1",
+      "agv_dock_assembly_a",
+      "agv_dock_assembly_b",
+      "agv_dock_inspection_a",
+      "agv_dock_inspection_b",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "agv_dock_warehouse",
+      "sensor_inventory_scanner_01",
+      "agv_dock_shipping",
+      "database_inventory"
+    ],
+    "safety_critical": false,
+    "task_program": [
+      "move",
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 6.250000000000002,
+        "loc": 21.7635,
+        "scale": 2.8490399999999996
+      },
+      "mean_seconds": 39.57000000000001,
+      "std_seconds": 7.1226,
+      "source": "literature_typical"
+    },
+    "mobility": "mobile",
+    "fault_rate": 0.1135
+  },
+  {
+    "entity_id": "plc_safety_01",
+    "entity_type": "robot",
+    "subtype": "safety_plc",
+    "home_zone": "zone_safety_systems",
+    "shift": "continuous",
+    "authorized_resources": [
+      "sensor_emergency_stop_01",
+      "actuator_safety_relay_01",
+      "database_alerts",
+      "sensor_emergency_stop_02",
+      "actuator_safety_relay_02"
+    ],
+    "typical_resources": [
+      "sensor_emergency_stop_01",
+      "actuator_safety_relay_01",
+      "database_alerts"
+    ],
+    "safety_critical": true,
+    "task_program": [
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 400.0,
+        "loc": 4.0,
+        "scale": 0.0025
+      },
+      "mean_seconds": 5.0,
+      "std_seconds": 0.05,
+      "source": "industry_practice_assumption",
+      "basis": "Represents the logged status-heartbeat interval reported to a SCADA/historian layer, not the internal safety scan rate (dedicated safety logic solvers scan in the 10-50ms range per IEC 61508/61511 practice -- a reaction-time requirement, not a logging-cadence one, and a different quantity from what is modeled here). No safety-domain-specific standard specifies a logging CADENCE for safety-status reporting to a historian, so no such citation is claimed. 5s is informed by common SCADA/OPC-UA historian logging conventions, which place trending-type data in a 5-10s band and routine equipment status/diagnostics in a 30-60s band (both well above sub-second critical-value polling and well below the internal safety-scan rate); 5s was kept at the tighter end of the trending band given the safety relevance of the underlying sensor. This is disclosed as an industry-practice-informed assumption, not a citable domain-specific figure -- it should not be presented in Table D1 with the same evidentiary weight as the Step 1 robot cycle-time figures."
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.001
+  },
+  {
+    "entity_id": "plc_safety_02",
+    "entity_type": "robot",
+    "subtype": "safety_plc",
+    "home_zone": "zone_safety_systems",
+    "shift": "continuous",
+    "authorized_resources": [
+      "sensor_emergency_stop_02",
+      "actuator_safety_relay_02",
+      "database_alerts",
+      "sensor_emergency_stop_01",
+      "actuator_safety_relay_01"
+    ],
+    "typical_resources": [
+      "sensor_emergency_stop_02",
+      "actuator_safety_relay_02",
+      "database_alerts"
+    ],
+    "safety_critical": true,
+    "task_program": [
+      "read_sensor",
+      "write_log"
+    ],
+    "cycle_time": {
+      "distribution": "gamma",
+      "params": {
+        "shape": 400.0,
+        "loc": 4.0,
+        "scale": 0.0025
+      },
+      "mean_seconds": 5.0,
+      "std_seconds": 0.05,
+      "source": "industry_practice_assumption",
+      "basis": "Represents the logged status-heartbeat interval reported to a SCADA/historian layer, not the internal safety scan rate (dedicated safety logic solvers scan in the 10-50ms range per IEC 61508/61511 practice -- a reaction-time requirement, not a logging-cadence one, and a different quantity from what is modeled here). No safety-domain-specific standard specifies a logging CADENCE for safety-status reporting to a historian, so no such citation is claimed. 5s is informed by common SCADA/OPC-UA historian logging conventions, which place trending-type data in a 5-10s band and routine equipment status/diagnostics in a 30-60s band (both well above sub-second critical-value polling and well below the internal safety-scan rate); 5s was kept at the tighter end of the trending band given the safety relevance of the underlying sensor. This is disclosed as an industry-practice-informed assumption, not a citable domain-specific figure -- it should not be presented in Table D1 with the same evidentiary weight as the Step 1 robot cycle-time figures."
+    },
+    "mobility": "fixed",
+    "fault_rate": 0.001
+  },
+  {
+    "entity_id": "human_operator_01",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_assembly_a",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_3",
+    "experience_years": 12.6,
+    "absence_rate": 0.0583
+  },
+  {
+    "entity_id": "human_operator_02",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_assembly_a",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_3",
+    "experience_years": 11.4,
+    "absence_rate": 0.0645
+  },
+  {
+    "entity_id": "human_operator_03",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_assembly_a",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_2",
+    "experience_years": 7.9,
+    "absence_rate": 0.0472
+  },
+  {
+    "entity_id": "human_operator_04",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_assembly_b",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_2",
+    "experience_years": 3.9,
+    "absence_rate": 0.0687
+  },
+  {
+    "entity_id": "human_operator_05",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_assembly_b",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_2",
+    "experience_years": 6.3,
+    "absence_rate": 0.0574
+  },
+  {
+    "entity_id": "human_operator_06",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_assembly_b",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_2",
+    "experience_years": 5.7,
+    "absence_rate": 0.0682
+  },
+  {
+    "entity_id": "human_operator_07",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_inspection_a",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "database_production_log",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_2",
+    "experience_years": 6.6,
+    "absence_rate": 0.0428
+  },
+  {
+    "entity_id": "human_operator_08",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_inspection_a",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "database_production_log",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_3",
+    "experience_years": 11.4,
+    "absence_rate": 0.0671
+  },
+  {
+    "entity_id": "human_operator_09",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_inspection_b",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "database_production_log",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_2",
+    "experience_years": 5.8,
+    "absence_rate": 0.075
+  },
+  {
+    "entity_id": "human_operator_10",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_inspection_b",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "database_production_log",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_1",
+    "experience_years": 2.7,
+    "absence_rate": 0.0305
+  },
+  {
+    "entity_id": "human_operator_11",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_warehouse",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "database_production_log",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_2",
+    "experience_years": 5.6,
+    "absence_rate": 0.0702
+  },
+  {
+    "entity_id": "human_operator_12",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_warehouse",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "database_production_log",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_2",
+    "experience_years": 5.8,
+    "absence_rate": 0.059
+  },
+  {
+    "entity_id": "human_operator_13",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_shipping",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_3",
+    "experience_years": 10.9,
+    "absence_rate": 0.0372
+  },
+  {
+    "entity_id": "human_operator_14",
+    "entity_type": "human",
+    "subtype": "operator",
+    "home_zone": "zone_shipping",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "database_quality_control"
+    ],
+    "typical_resources": [
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log"
+    ],
+    "safety_critical": false,
+    "work_pattern": "shift_routine",
+    "certification_level": "level_2",
+    "experience_years": 5.8,
+    "absence_rate": 0.0739
+  },
+  {
+    "entity_id": "human_technician_01",
+    "entity_type": "human",
+    "subtype": "technician",
+    "home_zone": "zone_maintenance_shop",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "safety_critical": false,
+    "work_pattern": "work_order_driven",
+    "certification_level": "level_3",
+    "experience_years": 9.9,
+    "absence_rate": 0.0321
+  },
+  {
+    "entity_id": "human_technician_02",
+    "entity_type": "human",
+    "subtype": "technician",
+    "home_zone": "zone_maintenance_shop",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1"
+    ],
+    "safety_critical": false,
+    "work_pattern": "work_order_driven",
+    "certification_level": "level_2",
+    "experience_years": 7.4,
+    "absence_rate": 0.0328
+  },
+  {
+    "entity_id": "human_technician_03",
+    "entity_type": "human",
+    "subtype": "technician",
+    "home_zone": "zone_maintenance_shop",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02"
+    ],
+    "safety_critical": false,
+    "work_pattern": "work_order_driven",
+    "certification_level": "level_3",
+    "experience_years": 10.1,
+    "absence_rate": 0.0502
+  },
+  {
+    "entity_id": "human_technician_04",
+    "entity_type": "human",
+    "subtype": "technician",
+    "home_zone": "zone_maintenance_shop",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "safety_critical": false,
+    "work_pattern": "work_order_driven",
+    "certification_level": "level_2",
+    "experience_years": 7.3,
+    "absence_rate": 0.0478
+  },
+  {
+    "entity_id": "human_technician_05",
+    "entity_type": "human",
+    "subtype": "technician",
+    "home_zone": "zone_maintenance_shop",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1"
+    ],
+    "safety_critical": false,
+    "work_pattern": "work_order_driven",
+    "certification_level": "level_2",
+    "experience_years": 6.6,
+    "absence_rate": 0.0485
+  },
+  {
+    "entity_id": "human_technician_06",
+    "entity_type": "human",
+    "subtype": "technician",
+    "home_zone": "zone_maintenance_shop",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02"
+    ],
+    "safety_critical": false,
+    "work_pattern": "work_order_driven",
+    "certification_level": "level_3",
+    "experience_years": 11.4,
+    "absence_rate": 0.0235
+  },
+  {
+    "entity_id": "human_technician_07",
+    "entity_type": "human",
+    "subtype": "technician",
+    "home_zone": "zone_maintenance_shop",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2"
+    ],
+    "safety_critical": false,
+    "work_pattern": "work_order_driven",
+    "certification_level": "level_2",
+    "experience_years": 7.8,
+    "absence_rate": 0.0327
+  },
+  {
+    "entity_id": "human_technician_08",
+    "entity_type": "human",
+    "subtype": "technician",
+    "home_zone": "zone_maintenance_shop",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_production_log"
+    ],
+    "typical_resources": [
+      "tool_diagnostic_kit_01",
+      "tool_diagnostic_kit_02",
+      "database_maintenance_workorders",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1"
+    ],
+    "safety_critical": false,
+    "work_pattern": "work_order_driven",
+    "certification_level": "level_2",
+    "experience_years": 7.9,
+    "absence_rate": 0.0364
+  },
+  {
+    "entity_id": "human_supervisor_01",
+    "entity_type": "human",
+    "subtype": "supervisor",
+    "home_zone": "zone_control_room",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "workstation_supervisor_01",
+      "database_production_log",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "database_access_control",
+      "database_quality_control",
+      "database_inventory",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02"
+    ],
+    "typical_resources": [
+      "workstation_supervisor_01",
+      "database_production_log",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1"
+    ],
+    "safety_critical": false,
+    "work_pattern": "rounds_and_approvals",
+    "certification_level": "level_3",
+    "experience_years": 15.6,
+    "absence_rate": 0.0126
+  },
+  {
+    "entity_id": "human_supervisor_02",
+    "entity_type": "human",
+    "subtype": "supervisor",
+    "home_zone": "zone_control_room",
+    "shift": "shift_A",
+    "authorized_resources": [
+      "workstation_supervisor_01",
+      "database_production_log",
+      "database_maintenance_workorders",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02",
+      "database_access_control",
+      "database_quality_control",
+      "database_inventory",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1"
+    ],
+    "typical_resources": [
+      "workstation_supervisor_01",
+      "database_production_log",
+      "database_maintenance_workorders",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02"
+    ],
+    "safety_critical": false,
+    "work_pattern": "rounds_and_approvals",
+    "certification_level": "level_3",
+    "experience_years": 11.2,
+    "absence_rate": 0.0148
+  },
+  {
+    "entity_id": "human_supervisor_03",
+    "entity_type": "human",
+    "subtype": "supervisor",
+    "home_zone": "zone_control_room",
+    "shift": "shift_B",
+    "authorized_resources": [
+      "workstation_supervisor_01",
+      "database_production_log",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01",
+      "database_access_control",
+      "database_quality_control",
+      "database_inventory",
+      "sensor_force_b1",
+      "sensor_force_b2",
+      "sensor_motion_b1",
+      "actuator_arm_b1",
+      "actuator_arm_b2",
+      "tool_gripper_b1",
+      "tool_gripper_b2",
+      "sensor_vision_b1",
+      "sensor_vision_b2",
+      "sensor_dimension_b1",
+      "sensor_inventory_scanner_02",
+      "tool_pallet_lift_02"
+    ],
+    "typical_resources": [
+      "workstation_supervisor_01",
+      "database_production_log",
+      "database_maintenance_workorders",
+      "sensor_force_a1",
+      "sensor_force_a2",
+      "sensor_motion_a1",
+      "actuator_arm_a1",
+      "actuator_arm_a2",
+      "tool_gripper_a1",
+      "tool_gripper_a2",
+      "sensor_vision_a1",
+      "sensor_vision_a2",
+      "sensor_dimension_a1",
+      "sensor_inventory_scanner_01",
+      "tool_pallet_lift_01"
+    ],
+    "safety_critical": false,
+    "work_pattern": "rounds_and_approvals",
+    "certification_level": "level_3",
+    "experience_years": 21.5,
+    "absence_rate": 0.0172
+  }
+]

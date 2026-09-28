@@ -31,20 +31,24 @@ MAINTENANCE_PROJECT_PATH = (
 # ==================================================
 
 def clear_src_modules():
-    """
-    Removes previously imported modules starting with src.
-    This prevents conflicts because both projects
-    contain a package named 'src'.
-    """
 
     modules_to_remove = []
 
     for module_name in sys.modules:
-        if module_name == "src" or module_name.startswith("src."):
-            modules_to_remove.append(module_name)
+
+        if (
+            module_name == "src"
+            or module_name.startswith("src.")
+        ):
+            modules_to_remove.append(
+                module_name
+            )
 
     for module_name in modules_to_remove:
-        del sys.modules[module_name]
+
+        del sys.modules[
+            module_name
+        ]
 
 
 # ==================================================
@@ -53,32 +57,24 @@ def clear_src_modules():
 
 def import_energy_agent():
 
-    print("\nTesting Energy Agent import...")
-
-    # Clear previous src imports
     clear_src_modules()
 
-    # Give priority to Milestone 1 project
     if str(ENERGY_PROJECT_PATH) in sys.path:
-        sys.path.remove(str(ENERGY_PROJECT_PATH))
+
+        sys.path.remove(
+            str(ENERGY_PROJECT_PATH)
+        )
 
     sys.path.insert(
         0,
         str(ENERGY_PROJECT_PATH)
     )
 
-    # Import Energy Agent
     module = importlib.import_module(
         "src.energy_agent"
     )
 
-    EnergyAgent = module.EnergyAgent
-
-    print(
-        "Energy Agent imported successfully!"
-    )
-
-    return EnergyAgent
+    return module.EnergyAgent
 
 
 # ==================================================
@@ -87,13 +83,10 @@ def import_energy_agent():
 
 def import_maintenance_agent():
 
-    print("\nTesting Maintenance Agent import...")
-
-    # Clear previous src imports
     clear_src_modules()
 
-    # Give priority to Milestone 2 project
     if str(MAINTENANCE_PROJECT_PATH) in sys.path:
+
         sys.path.remove(
             str(MAINTENANCE_PROJECT_PATH)
         )
@@ -103,22 +96,37 @@ def import_maintenance_agent():
         str(MAINTENANCE_PROJECT_PATH)
     )
 
-    # Import Maintenance Agent
     module = importlib.import_module(
         "src.maintenance_agent"
     )
 
-    MaintenanceAgent = module.MaintenanceAgent
-
-    print(
-        "Maintenance Agent imported successfully!"
-    )
-
-    return MaintenanceAgent
+    return module.MaintenanceAgent
 
 
 # ==================================================
-# MAIN TEST
+# PYTEST TESTS
+# ==================================================
+
+def test_energy_agent_import():
+
+    EnergyAgent = import_energy_agent()
+
+    assert EnergyAgent is not None
+
+    assert EnergyAgent.__name__ == "EnergyAgent"
+
+
+def test_maintenance_agent_import():
+
+    MaintenanceAgent = import_maintenance_agent()
+
+    assert MaintenanceAgent is not None
+
+    assert MaintenanceAgent.__name__ == "MaintenanceAgent"
+
+
+# ==================================================
+# MANUAL TEST
 # ==================================================
 
 if __name__ == "__main__":
@@ -137,15 +145,9 @@ if __name__ == "__main__":
         f"{MAINTENANCE_PROJECT_PATH}"
     )
 
-    # ----------------------------------------------
-
     EnergyAgent = import_energy_agent()
 
-    # ----------------------------------------------
-
     MaintenanceAgent = import_maintenance_agent()
-
-    # ----------------------------------------------
 
     print(
         "\n========== IMPORT TEST COMPLETED =========="
@@ -159,14 +161,10 @@ if __name__ == "__main__":
         "\nEnergy Agent Class:"
     )
 
-    print(
-        EnergyAgent
-    )
+    print(EnergyAgent)
 
     print(
         "\nMaintenance Agent Class:"
     )
 
-    print(
-        MaintenanceAgent
-    )
+    print(MaintenanceAgent)

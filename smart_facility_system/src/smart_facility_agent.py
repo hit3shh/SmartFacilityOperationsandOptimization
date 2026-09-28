@@ -30,6 +30,28 @@ MAINTENANCE_PROJECT_PATH = os.path.join(
     "M2_Predictive_Maintenance"
 )
 
+OCCUPANCY_PROJECT_PATH = os.path.join(
+    SPRINGBOARD_DIR,
+    "M3_Occupancy_and_Security_Intelligence",
+    "occupancy_system"
+)
+
+OCCUPANCY_SRC_PATH = os.path.join(
+    OCCUPANCY_PROJECT_PATH,
+    "src"
+)
+
+SECURITY_PROJECT_PATH = os.path.join(
+    SPRINGBOARD_DIR,
+    "M3_Occupancy_and_Security_Intelligence",
+    "security_system"
+)
+
+SECURITY_SRC_PATH = os.path.join(
+    SECURITY_PROJECT_PATH,
+    "src"
+)
+
 
 # ==================================================
 # IMPORT HELPER
@@ -108,6 +130,54 @@ def get_maintenance_agent_class():
 
 
 # ==================================================
+# IMPORT OCCUPANCY AGENT
+# ==================================================
+
+def get_occupancy_agent_class():
+
+    if OCCUPANCY_SRC_PATH in sys.path:
+
+        sys.path.remove(
+            OCCUPANCY_SRC_PATH
+        )
+
+    sys.path.insert(
+        0,
+        OCCUPANCY_SRC_PATH
+    )
+
+    module = importlib.import_module(
+        "occupancy_agent"
+    )
+
+    return module.OccupancyAgent
+
+
+# ==================================================
+# IMPORT SECURITY AGENT
+# ==================================================
+
+def get_security_agent_class():
+
+    if SECURITY_SRC_PATH in sys.path:
+
+        sys.path.remove(
+            SECURITY_SRC_PATH
+        )
+
+    sys.path.insert(
+        0,
+        SECURITY_SRC_PATH
+    )
+
+    module = importlib.import_module(
+        "security_agent"
+    )
+
+    return module.SecurityAgent
+
+
+# ==================================================
 # SMART FACILITY AGENT
 # ==================================================
 
@@ -118,13 +188,21 @@ class SmartFacilityAgent:
         maintenance_model_path
     ):
 
-        # Import both agent classes
+        # Import agent classes
         EnergyAgent = (
             get_energy_agent_class()
         )
 
         MaintenanceAgent = (
             get_maintenance_agent_class()
+        )
+
+        OccupancyAgent = (
+            get_occupancy_agent_class()
+        )
+
+        SecurityAgent = (
+            get_security_agent_class()
         )
 
 
@@ -137,6 +215,14 @@ class SmartFacilityAgent:
             MaintenanceAgent(
                 maintenance_model_path
             )
+        )
+
+        self.occupancy_agent = (
+            OccupancyAgent()
+        )
+
+        self.security_agent = (
+            SecurityAgent()
         )
 
 
@@ -183,6 +269,60 @@ class SmartFacilityAgent:
             .get_dataset_summary(
                 maintenance_df
             )
+        )
+
+
+    # ==============================================
+    # OCCUPANCY ANALYSIS
+    # ==============================================
+
+    def run_occupancy_analysis(
+        self,
+        occupancy_df
+    ):
+
+        return (
+            self.occupancy_agent
+            .analyze(
+                occupancy_df
+            )
+        )
+
+
+    # ==============================================
+    # SECURITY ANALYSIS
+    # ==============================================
+
+    def analyze_security_event(
+        self,
+        event
+    ):
+
+        return (
+            self.security_agent
+            .analyze_event(
+                event
+            )
+        )
+
+
+    def get_security_alert_history(
+        self
+    ):
+
+        return (
+            self.security_agent
+            .get_alert_history()
+        )
+
+
+    def clear_security_alert_history(
+        self
+    ):
+
+        return (
+            self.security_agent
+            .clear_alert_history()
         )
 
 

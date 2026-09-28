@@ -1,0 +1,825 @@
+[
+  {
+    "instance": "A1_0000",
+    "type": "A1_compromised_robot",
+    "agent": "robot_assembly_02",
+    "n_rows": 8,
+    "start_timestamp": "2026-01-23T11:04:54.159731"
+  },
+  {
+    "instance": "A1_0001",
+    "type": "A1_compromised_robot",
+    "agent": "robot_assembly_12",
+    "n_rows": 7,
+    "start_timestamp": "2026-01-22T11:07:36.743989"
+  },
+  {
+    "instance": "A1_0002",
+    "type": "A1_compromised_robot",
+    "agent": "robot_assembly_12",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-29T14:19:06.436867"
+  },
+  {
+    "instance": "A1_0003",
+    "type": "A1_compromised_robot",
+    "agent": "robot_assembly_14",
+    "n_rows": 7,
+    "start_timestamp": "2026-01-20T08:09:00.317240"
+  },
+  {
+    "instance": "A1_0004",
+    "type": "A1_compromised_robot",
+    "agent": "robot_camera_08",
+    "n_rows": 7,
+    "start_timestamp": "2026-01-31T11:47:17.031995"
+  },
+  {
+    "instance": "A1_0005",
+    "type": "A1_compromised_robot",
+    "agent": "robot_assembly_09",
+    "n_rows": 7,
+    "start_timestamp": "2026-01-21T18:27:17.027646"
+  },
+  {
+    "instance": "A1_0006",
+    "type": "A1_compromised_robot",
+    "agent": "robot_assembly_06",
+    "n_rows": 8,
+    "start_timestamp": "2026-02-01T06:40:22.374990"
+  },
+  {
+    "instance": "A1_0007",
+    "type": "A1_compromised_robot",
+    "agent": "robot_inspection_07",
+    "n_rows": 7,
+    "start_timestamp": "2026-01-27T17:04:23.924963"
+  },
+  {
+    "instance": "A1_0008",
+    "type": "A1_compromised_robot",
+    "agent": "robot_assembly_01",
+    "n_rows": 8,
+    "start_timestamp": "2026-01-28T13:40:54.109887"
+  },
+  {
+    "instance": "A1_0009",
+    "type": "A1_compromised_robot",
+    "agent": "robot_inspection_05",
+    "n_rows": 7,
+    "start_timestamp": "2026-01-29T14:23:19.179084"
+  },
+  {
+    "instance": "A1_0010",
+    "type": "A1_compromised_robot",
+    "agent": "robot_assembly_09",
+    "n_rows": 8,
+    "start_timestamp": "2026-01-19T16:47:17.645616"
+  },
+  {
+    "instance": "A1_0011",
+    "type": "A1_compromised_robot",
+    "agent": "robot_inspection_02",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-21T18:22:20.257869"
+  },
+  {
+    "instance": "A1_0012",
+    "type": "A1_compromised_robot",
+    "agent": "robot_inspection_02",
+    "n_rows": 8,
+    "start_timestamp": "2026-01-27T13:07:51.399623"
+  },
+  {
+    "instance": "A1_0013",
+    "type": "A1_compromised_robot",
+    "agent": "robot_transport_04",
+    "n_rows": 7,
+    "start_timestamp": "2026-01-29T11:24:56.120794"
+  },
+  {
+    "instance": "A1_0014",
+    "type": "A1_compromised_robot",
+    "agent": "robot_inspection_04",
+    "n_rows": 7,
+    "start_timestamp": "2026-02-01T12:48:22.386822"
+  },
+  {
+    "instance": "A2_0000",
+    "type": "A2_cross_zone",
+    "agent": "robot_transport_06",
+    "foreign_zone": "zone_control_room",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-23T09:08:27.253808"
+  },
+  {
+    "instance": "A2_0001",
+    "type": "A2_cross_zone",
+    "agent": "robot_assembly_15",
+    "foreign_zone": "zone_inspection_b",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-30T10:08:59.925540"
+  },
+  {
+    "instance": "A2_0002",
+    "type": "A2_cross_zone",
+    "agent": "robot_assembly_04",
+    "foreign_zone": "zone_maintenance_shop",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-27T09:06:02.095615"
+  },
+  {
+    "instance": "A2_0003",
+    "type": "A2_cross_zone",
+    "agent": "robot_camera_07",
+    "foreign_zone": "zone_shipping",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-20T11:06:44.382033"
+  },
+  {
+    "instance": "A2_0004",
+    "type": "A2_cross_zone",
+    "agent": "robot_camera_05",
+    "foreign_zone": "zone_assembly_b",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-23T14:12:59.802491"
+  },
+  {
+    "instance": "A2_0005",
+    "type": "A2_cross_zone",
+    "agent": "robot_camera_03",
+    "foreign_zone": "zone_maintenance_shop",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-22T21:35:35.416922"
+  },
+  {
+    "instance": "A2_0006",
+    "type": "A2_cross_zone",
+    "agent": "robot_inspection_04",
+    "foreign_zone": "zone_assembly_a",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-29T19:38:21.116206"
+  },
+  {
+    "instance": "A2_0007",
+    "type": "A2_cross_zone",
+    "agent": "robot_assembly_07",
+    "foreign_zone": "zone_inspection_a",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-23T19:14:19.717418"
+  },
+  {
+    "instance": "A2_0008",
+    "type": "A2_cross_zone",
+    "agent": "robot_assembly_05",
+    "foreign_zone": "zone_inspection_a",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-23T11:49:40.233564"
+  },
+  {
+    "instance": "A2_0009",
+    "type": "A2_cross_zone",
+    "agent": "robot_camera_03",
+    "foreign_zone": "zone_control_room",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-20T07:26:57.035532"
+  },
+  {
+    "instance": "A2_0010",
+    "type": "A2_cross_zone",
+    "agent": "robot_assembly_15",
+    "foreign_zone": "zone_shipping",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-25T19:18:05.587174"
+  },
+  {
+    "instance": "A2_0011",
+    "type": "A2_cross_zone",
+    "agent": "robot_inspection_01",
+    "foreign_zone": "zone_shipping",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-31T14:32:56.145997"
+  },
+  {
+    "instance": "A2_0012",
+    "type": "A2_cross_zone",
+    "agent": "robot_camera_06",
+    "foreign_zone": "zone_control_room",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-20T17:03:59.531142"
+  },
+  {
+    "instance": "A2_0013",
+    "type": "A2_cross_zone",
+    "agent": "robot_assembly_15",
+    "foreign_zone": "zone_warehouse",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-24T15:00:00.765159"
+  },
+  {
+    "instance": "A2_0014",
+    "type": "A2_cross_zone",
+    "agent": "robot_transport_05",
+    "foreign_zone": "zone_control_room",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-23T19:51:32.057593"
+  },
+  {
+    "instance": "A3_0000",
+    "type": "A3_frequency_spike",
+    "agent": "robot_inspection_08",
+    "n_rows": 8,
+    "baseline_logged_gap_seconds": 1200.0,
+    "spike_gap_mean_seconds": 120.0,
+    "start_timestamp": "2026-01-24T16:47:51.556053"
+  },
+  {
+    "instance": "A3_0001",
+    "type": "A3_frequency_spike",
+    "agent": "robot_inspection_06",
+    "n_rows": 8,
+    "baseline_logged_gap_seconds": 1200.0,
+    "spike_gap_mean_seconds": 120.0,
+    "start_timestamp": "2026-01-22T06:47:42.350551"
+  },
+  {
+    "instance": "A3_0002",
+    "type": "A3_frequency_spike",
+    "agent": "robot_assembly_13",
+    "n_rows": 15,
+    "baseline_logged_gap_seconds": 886.1538461538462,
+    "spike_gap_mean_seconds": 88.61538461538461,
+    "start_timestamp": "2026-01-29T07:42:22.660500"
+  },
+  {
+    "instance": "A3_0003",
+    "type": "A3_frequency_spike",
+    "agent": "robot_assembly_05",
+    "n_rows": 15,
+    "baseline_logged_gap_seconds": 886.1538461538462,
+    "spike_gap_mean_seconds": 88.61538461538461,
+    "start_timestamp": "2026-01-23T18:37:02.396964"
+  },
+  {
+    "instance": "A3_0004",
+    "type": "A3_frequency_spike",
+    "agent": "robot_inspection_03",
+    "n_rows": 8,
+    "baseline_logged_gap_seconds": 1200.0,
+    "spike_gap_mean_seconds": 120.0,
+    "start_timestamp": "2026-01-30T18:26:59.094141"
+  },
+  {
+    "instance": "A3_0005",
+    "type": "A3_frequency_spike",
+    "agent": "robot_camera_09",
+    "n_rows": 5,
+    "baseline_logged_gap_seconds": 1047.272727272727,
+    "spike_gap_mean_seconds": 104.7272727272727,
+    "start_timestamp": "2026-01-25T16:20:44.625356"
+  },
+  {
+    "instance": "A3_0006",
+    "type": "A3_frequency_spike",
+    "agent": "robot_assembly_15",
+    "n_rows": 15,
+    "baseline_logged_gap_seconds": 886.1538461538462,
+    "spike_gap_mean_seconds": 88.61538461538461,
+    "start_timestamp": "2026-01-22T20:11:30.544958"
+  },
+  {
+    "instance": "A3_0007",
+    "type": "A3_frequency_spike",
+    "agent": "robot_camera_08",
+    "n_rows": 6,
+    "baseline_logged_gap_seconds": 1047.272727272727,
+    "spike_gap_mean_seconds": 104.7272727272727,
+    "start_timestamp": "2026-01-23T13:40:00.517958"
+  },
+  {
+    "instance": "A3_0008",
+    "type": "A3_frequency_spike",
+    "agent": "robot_inspection_02",
+    "n_rows": 8,
+    "baseline_logged_gap_seconds": 1200.0,
+    "spike_gap_mean_seconds": 120.0,
+    "start_timestamp": "2026-01-29T12:55:41.363306"
+  },
+  {
+    "instance": "A3_0009",
+    "type": "A3_frequency_spike",
+    "agent": "robot_assembly_13",
+    "n_rows": 13,
+    "baseline_logged_gap_seconds": 886.1538461538462,
+    "spike_gap_mean_seconds": 88.61538461538461,
+    "start_timestamp": "2026-01-25T11:13:38.632582"
+  },
+  {
+    "instance": "A3_0010",
+    "type": "A3_frequency_spike",
+    "agent": "robot_assembly_02",
+    "n_rows": 15,
+    "baseline_logged_gap_seconds": 886.1538461538462,
+    "spike_gap_mean_seconds": 88.61538461538461,
+    "start_timestamp": "2026-01-28T09:36:09.072837"
+  },
+  {
+    "instance": "A3_0011",
+    "type": "A3_frequency_spike",
+    "agent": "robot_transport_03",
+    "n_rows": 11,
+    "baseline_logged_gap_seconds": 1799.9999999999995,
+    "spike_gap_mean_seconds": 179.99999999999994,
+    "start_timestamp": "2026-02-01T17:51:32.183344"
+  },
+  {
+    "instance": "A4_0000",
+    "type": "A4_stolen_credentials",
+    "victim": "human_operator_08",
+    "impostor_pattern_from": "human_technician_05",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-27T14:07:36.459460"
+  },
+  {
+    "instance": "A4_0001",
+    "type": "A4_stolen_credentials",
+    "victim": "human_operator_06",
+    "impostor_pattern_from": "human_technician_04",
+    "n_rows": 5,
+    "start_timestamp": "2026-01-19T14:04:04.420226"
+  },
+  {
+    "instance": "A4_0002",
+    "type": "A4_stolen_credentials",
+    "victim": "human_operator_03",
+    "impostor_pattern_from": "human_technician_04",
+    "n_rows": 11,
+    "start_timestamp": "2026-01-19T06:04:16.943318"
+  },
+  {
+    "instance": "A4_0003",
+    "type": "A4_stolen_credentials",
+    "victim": "human_operator_05",
+    "impostor_pattern_from": "human_technician_03",
+    "n_rows": 7,
+    "start_timestamp": "2026-01-22T13:48:16.802684"
+  },
+  {
+    "instance": "A4_0004",
+    "type": "A4_stolen_credentials",
+    "victim": "human_operator_08",
+    "impostor_pattern_from": "human_technician_03",
+    "n_rows": 9,
+    "start_timestamp": "2026-01-29T20:00:00.000000"
+  },
+  {
+    "instance": "A4_0005",
+    "type": "A4_stolen_credentials",
+    "victim": "human_operator_05",
+    "impostor_pattern_from": "human_technician_02",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-19T06:12:51.555765"
+  },
+  {
+    "instance": "A4_0006",
+    "type": "A4_stolen_credentials",
+    "victim": "human_operator_04",
+    "impostor_pattern_from": "human_technician_02",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-31T21:43:44.873549"
+  },
+  {
+    "instance": "A4_0007",
+    "type": "A4_stolen_credentials",
+    "victim": "human_operator_11",
+    "impostor_pattern_from": "human_technician_01",
+    "n_rows": 8,
+    "start_timestamp": "2026-01-24T06:00:52.841478"
+  },
+  {
+    "instance": "A4_0008",
+    "type": "A4_stolen_credentials",
+    "victim": "human_operator_04",
+    "impostor_pattern_from": "human_supervisor_01",
+    "n_rows": 10,
+    "start_timestamp": "2026-01-23T20:00:00.000000"
+  },
+  {
+    "instance": "A4_0009",
+    "type": "A4_stolen_credentials",
+    "victim": "human_supervisor_01",
+    "impostor_pattern_from": "human_technician_07",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-26T06:44:22.408534"
+  },
+  {
+    "instance": "A5_0000",
+    "type": "A5_insider_misuse",
+    "agent": "human_operator_09",
+    "n_rows": 4,
+    "start_timestamp": "2026-01-26T03:32:03.826147"
+  },
+  {
+    "instance": "A5_0001",
+    "type": "A5_insider_misuse",
+    "agent": "human_operator_04",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-21T00:13:01.283140"
+  },
+  {
+    "instance": "A5_0002",
+    "type": "A5_insider_misuse",
+    "agent": "human_technician_08",
+    "n_rows": 4,
+    "start_timestamp": "2026-01-24T01:34:54.462124"
+  },
+  {
+    "instance": "A5_0003",
+    "type": "A5_insider_misuse",
+    "agent": "human_technician_03",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-25T03:53:22.136998"
+  },
+  {
+    "instance": "A5_0004",
+    "type": "A5_insider_misuse",
+    "agent": "human_operator_10",
+    "n_rows": 4,
+    "start_timestamp": "2026-01-19T03:00:01.104369"
+  },
+  {
+    "instance": "A5_0005",
+    "type": "A5_insider_misuse",
+    "agent": "human_technician_03",
+    "n_rows": 5,
+    "start_timestamp": "2026-01-23T15:44:23.688351"
+  },
+  {
+    "instance": "A5_0006",
+    "type": "A5_insider_misuse",
+    "agent": "human_technician_07",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-25T05:04:09.036478"
+  },
+  {
+    "instance": "A5_0007",
+    "type": "A5_insider_misuse",
+    "agent": "human_technician_03",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-20T20:04:35.170108"
+  },
+  {
+    "instance": "A5_0008",
+    "type": "A5_insider_misuse",
+    "agent": "human_technician_07",
+    "n_rows": 4,
+    "start_timestamp": "2026-01-19T03:27:51.337778"
+  },
+  {
+    "instance": "A5_0009",
+    "type": "A5_insider_misuse",
+    "agent": "human_supervisor_01",
+    "n_rows": 6,
+    "start_timestamp": "2026-02-01T20:20:05.703870"
+  },
+  {
+    "instance": "A5_0010",
+    "type": "A5_insider_misuse",
+    "agent": "human_operator_04",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-31T12:45:44.332612"
+  },
+  {
+    "instance": "A5_0011",
+    "type": "A5_insider_misuse",
+    "agent": "human_technician_08",
+    "n_rows": 6,
+    "start_timestamp": "2026-01-22T05:26:28.138538"
+  },
+  {
+    "instance": "A5_0012",
+    "type": "A5_insider_misuse",
+    "agent": "human_operator_05",
+    "n_rows": 5,
+    "start_timestamp": "2026-01-28T14:06:40.969666"
+  },
+  {
+    "instance": "A5_0013",
+    "type": "A5_insider_misuse",
+    "agent": "human_technician_08",
+    "n_rows": 5,
+    "start_timestamp": "2026-01-25T03:49:10.304697"
+  },
+  {
+    "instance": "A5_0014",
+    "type": "A5_insider_misuse",
+    "agent": "human_technician_02",
+    "n_rows": 5,
+    "start_timestamp": "2026-01-21T06:04:57.015847"
+  },
+  {
+    "instance": "A6_0000",
+    "type": "A6_off_shift_access",
+    "agent": "human_operator_10",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-22T00:52:15.296882"
+  },
+  {
+    "instance": "A6_0001",
+    "type": "A6_off_shift_access",
+    "agent": "human_operator_02",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-28T10:09:12.520405"
+  },
+  {
+    "instance": "A6_0002",
+    "type": "A6_off_shift_access",
+    "agent": "human_technician_02",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-25T22:52:41.688185"
+  },
+  {
+    "instance": "A6_0003",
+    "type": "A6_off_shift_access",
+    "agent": "human_operator_05",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-21T03:25:20.141083"
+  },
+  {
+    "instance": "A6_0004",
+    "type": "A6_off_shift_access",
+    "agent": "human_technician_06",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-28T13:16:35.786266"
+  },
+  {
+    "instance": "A6_0005",
+    "type": "A6_off_shift_access",
+    "agent": "human_technician_06",
+    "n_rows": 1,
+    "start_timestamp": "2026-01-25T23:38:35.241401"
+  },
+  {
+    "instance": "A6_0006",
+    "type": "A6_off_shift_access",
+    "agent": "human_supervisor_03",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-21T08:46:30.946385"
+  },
+  {
+    "instance": "A6_0007",
+    "type": "A6_off_shift_access",
+    "agent": "human_operator_04",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-21T13:50:37.497747"
+  },
+  {
+    "instance": "A6_0008",
+    "type": "A6_off_shift_access",
+    "agent": "human_operator_08",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-22T04:44:25.074340"
+  },
+  {
+    "instance": "A6_0009",
+    "type": "A6_off_shift_access",
+    "agent": "human_operator_05",
+    "n_rows": 3,
+    "start_timestamp": "2026-01-27T01:56:08.871425"
+  },
+  {
+    "instance": "A6_0010",
+    "type": "A6_off_shift_access",
+    "agent": "human_operator_10",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-27T02:27:27.763584"
+  },
+  {
+    "instance": "A6_0011",
+    "type": "A6_off_shift_access",
+    "agent": "human_supervisor_01",
+    "n_rows": 1,
+    "start_timestamp": "2026-01-20T22:54:00.746040"
+  },
+  {
+    "instance": "A6_0012",
+    "type": "A6_off_shift_access",
+    "agent": "human_operator_13",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-20T05:52:11.249791"
+  },
+  {
+    "instance": "A6_0013",
+    "type": "A6_off_shift_access",
+    "agent": "human_supervisor_01",
+    "n_rows": 2,
+    "start_timestamp": "2026-01-20T01:43:32.157039"
+  },
+  {
+    "instance": "A6_0014",
+    "type": "A6_off_shift_access",
+    "agent": "human_operator_04",
+    "n_rows": 1,
+    "start_timestamp": "2026-01-29T11:57:18.789745"
+  },
+  {
+    "instance": "A7_0000",
+    "type": "A7_coordinated",
+    "zone": "zone_shipping",
+    "robot": "robot_transport_04",
+    "human": "human_technician_01",
+    "correlation_id": "corr_A7_0000",
+    "gap_seconds": 47.06412830227055,
+    "timestamp": "2026-01-22T08:49:02.829701"
+  },
+  {
+    "instance": "A7_0001",
+    "type": "A7_coordinated",
+    "zone": "zone_inspection_a",
+    "robot": "robot_camera_05",
+    "human": "human_technician_08",
+    "correlation_id": "corr_A7_0001",
+    "gap_seconds": 32.472198714036494,
+    "timestamp": "2026-01-30T21:22:55.048940"
+  },
+  {
+    "instance": "A7_0002",
+    "type": "A7_coordinated",
+    "zone": "zone_shipping",
+    "robot": "robot_camera_10",
+    "human": "human_supervisor_02",
+    "correlation_id": "corr_A7_0002",
+    "gap_seconds": 12.10893013421446,
+    "timestamp": "2026-01-25T18:52:20.131914"
+  },
+  {
+    "instance": "A7_0003",
+    "type": "A7_coordinated",
+    "zone": "zone_assembly_b",
+    "robot": "robot_transport_01",
+    "human": "human_operator_06",
+    "correlation_id": "corr_A7_0003",
+    "gap_seconds": 77.354118430987,
+    "timestamp": "2026-01-24T20:33:25.927028"
+  },
+  {
+    "instance": "A7_0004",
+    "type": "A7_coordinated",
+    "zone": "zone_shipping",
+    "robot": "robot_camera_09",
+    "human": "human_technician_02",
+    "correlation_id": "corr_A7_0004",
+    "gap_seconds": 58.64636816829443,
+    "timestamp": "2026-01-30T18:58:34.347080"
+  },
+  {
+    "instance": "A7_0005",
+    "type": "A7_coordinated",
+    "zone": "zone_warehouse",
+    "robot": "robot_transport_06",
+    "human": "human_technician_04",
+    "correlation_id": "corr_A7_0005",
+    "gap_seconds": 31.965735354227945,
+    "timestamp": "2026-01-26T07:50:44.973432"
+  },
+  {
+    "instance": "A7_0006",
+    "type": "A7_coordinated",
+    "zone": "zone_assembly_a",
+    "robot": "robot_transport_03",
+    "human": "human_technician_06",
+    "correlation_id": "corr_A7_0006",
+    "gap_seconds": 42.41375730675645,
+    "timestamp": "2026-01-25T08:58:34.178742"
+  },
+  {
+    "instance": "A7_0007",
+    "type": "A7_coordinated",
+    "zone": "zone_server_room",
+    "robot": "robot_assembly_06",
+    "human": "human_operator_07",
+    "correlation_id": "corr_A7_0007",
+    "gap_seconds": 23.268905836623162,
+    "timestamp": "2026-02-01T12:53:31.023450"
+  },
+  {
+    "instance": "A7_0008",
+    "type": "A7_coordinated",
+    "zone": "zone_warehouse",
+    "robot": "robot_transport_01",
+    "human": "human_supervisor_03",
+    "correlation_id": "corr_A7_0008",
+    "gap_seconds": 40.65293762553483,
+    "timestamp": "2026-01-24T12:49:35.802794"
+  },
+  {
+    "instance": "A7_0009",
+    "type": "A7_coordinated",
+    "zone": "zone_shipping",
+    "robot": "robot_camera_09",
+    "human": "human_technician_08",
+    "correlation_id": "corr_A7_0009",
+    "gap_seconds": 95.61566571705043,
+    "timestamp": "2026-02-01T14:39:37.697617"
+  },
+  {
+    "instance": "A7_0010",
+    "type": "A7_coordinated",
+    "zone": "zone_assembly_a",
+    "robot": "robot_inspection_05",
+    "human": "human_technician_08",
+    "correlation_id": "corr_A7_0010",
+    "gap_seconds": 84.53284939262085,
+    "timestamp": "2026-01-26T09:13:42.291699"
+  },
+  {
+    "instance": "A7_0011",
+    "type": "A7_coordinated",
+    "zone": "zone_assembly_b",
+    "robot": "robot_transport_06",
+    "human": "human_technician_08",
+    "correlation_id": "corr_A7_0011",
+    "gap_seconds": 38.29093500436284,
+    "timestamp": "2026-01-28T18:02:11.811456"
+  },
+  {
+    "instance": "A7_0012",
+    "type": "A7_coordinated",
+    "zone": "zone_inspection_b",
+    "robot": "robot_camera_06",
+    "human": "human_supervisor_02",
+    "correlation_id": "corr_A7_0012",
+    "gap_seconds": 3.9677766733802855,
+    "timestamp": "2026-01-30T20:22:55.501690"
+  },
+  {
+    "instance": "A7_0013",
+    "type": "A7_coordinated",
+    "zone": "zone_shipping",
+    "robot": "robot_transport_02",
+    "human": "human_technician_07",
+    "correlation_id": "corr_A7_0013",
+    "gap_seconds": 36.428335482487455,
+    "timestamp": "2026-01-27T15:59:36.277885"
+  },
+  {
+    "instance": "A7_0014",
+    "type": "A7_coordinated",
+    "zone": "zone_warehouse",
+    "robot": "robot_transport_05",
+    "human": "human_technician_06",
+    "correlation_id": "corr_A7_0014",
+    "gap_seconds": 89.12356986152008,
+    "timestamp": "2026-02-01T11:06:08.208917"
+  },
+  {
+    "instance": "A7_0015",
+    "type": "A7_coordinated",
+    "zone": "zone_shipping",
+    "robot": "robot_camera_09",
+    "human": "human_operator_11",
+    "correlation_id": "corr_A7_0015",
+    "gap_seconds": 68.36865770653822,
+    "timestamp": "2026-01-28T12:11:04.296410"
+  },
+  {
+    "instance": "A7_0016",
+    "type": "A7_coordinated",
+    "zone": "zone_server_room",
+    "robot": "robot_assembly_12",
+    "human": "human_operator_08",
+    "correlation_id": "corr_A7_0016",
+    "gap_seconds": 6.5938607500866055,
+    "timestamp": "2026-01-21T13:27:28.674179"
+  },
+  {
+    "instance": "A7_0017",
+    "type": "A7_coordinated",
+    "zone": "zone_inspection_a",
+    "robot": "robot_transport_05",
+    "human": "human_technician_08",
+    "correlation_id": "corr_A7_0017",
+    "gap_seconds": 82.46214027004316,
+    "timestamp": "2026-02-01T13:37:32.021332"
+  },
+  {
+    "instance": "A7_0018",
+    "type": "A7_coordinated",
+    "zone": "zone_server_room",
+    "robot": "robot_camera_09",
+    "human": "human_operator_12",
+    "correlation_id": "corr_A7_0018",
+    "gap_seconds": 2.656846715370193,
+    "timestamp": "2026-01-20T12:00:54.872197"
+  },
+  {
+    "instance": "A7_0019",
+    "type": "A7_coordinated",
+    "zone": "zone_inspection_a",
+    "robot": "robot_transport_03",
+    "human": "human_supervisor_03",
+    "correlation_id": "corr_A7_0019",
+    "gap_seconds": 76.2430542812217,
+    "timestamp": "2026-01-26T17:01:36.492588"
+  }
+]
